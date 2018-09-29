@@ -1,10 +1,10 @@
 # OpenHM
 
-This project converts video in heatmap. In the framework of the hackhaton “UrbanHack” 2018.
+This project converts video in heatmap. In framework of the hackhaton “UrbanHack” 2018.
 
 ## Getting Started
 
-Just launch heatmaptestprog.py and enjoy!
+Just launch ***"heatmaptestprog_obrazec.py"*** and enjoy!
 
 ## Requirements
 
