@@ -4,7 +4,7 @@ This project converts video in heatmap. In framework of the hackhaton “UrbanHa
 
 ## Getting Started
 
-All classes are located in ###"hm_class_mapping.py"###.
+All classes are located in **"hm_class_mapping.py"**.
 
 ## Requirements
 
