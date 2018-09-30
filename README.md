@@ -4,11 +4,12 @@ This project converts video in heatmap. In framework of the hackhaton “UrbanHa
 
 ## Getting Started
 
-Just launch ***"heatmaptestprog_obrazec.py"*** and enjoy!
+All classes are located in ###"hm_class_mapping.py"###.
 
 ## Requirements
 
-OpenCV (Open Source Computer Vision Library)
+* OpenCV (Open Source Computer Vision Library)
+* PIL (Python Imaging Library)
 
 ## Authors
 
