@@ -3,6 +3,11 @@ import Tkinter, Tkconstants, tkFileDialog
 from PIL import ImageTk, Image
 import ctypes
 import hm_class_mapping as hm
+import cv2
+from imutils.video import VideoStream
+from imutils.video import FPS
+import time
+import dlib
 
 
 al_type = str("null")
@@ -22,7 +27,8 @@ mb["menu"]  =  mb.menu
 alg1 = "Alg1"
 alg2 = "Alg2"
 alg3 = "Alg3"
-items = [[alg1, tk.IntVar()], [alg2, tk.IntVar()], [alg3, tk.IntVar()]]
+alg4 = "Cnt"
+items = [[alg1, tk.IntVar()], [alg2, tk.IntVar()], [alg3, tk.IntVar()], [alg4, tk.IntVar()]]
 
 def Item_test():
 	ret = str("null")
@@ -39,9 +45,20 @@ for i in items:
 	mb.menu.add_checkbutton ( label=i[0], variable = i[1], command = Item_test)		
 
 def start_stream_mapping():
+	algorithm_tipe = Item_test()
 	root.destroy()
-	pass
-	
+	a = hm.Mkmap("")
+	if algorithm_tipe == "Alg1":
+		a.mapping1rt()
+	elif algorithm_tipe == "Alg2":
+		a.mapping2rt()
+	elif algorithm_tipe == "Alg3":
+		a.mapping3rt()
+	elif algorithm_tipe == "Cnt":
+		a.countf()
+	else:
+		a.mapping1rt()
+		
 
 def start_path_mapping():
 	algorithm_tipe = Item_test()
@@ -56,6 +73,8 @@ def start_path_mapping():
 			a.mapping2()
 		elif algorithm_tipe == "Alg3":
 			a.mapping3()
+		elif algorithm_tipe == "Cnt":
+			a.countf()
 		else:
 			a.mapping1()
 
